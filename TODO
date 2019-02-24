@@ -1,0 +1,11 @@
+
+- Benchmarks on a parallel and non parallel flux
+    - Create a parallel and non parallel flux that makes calls to blocking endpoints
+
+- Benchmarks on reactive vs blocking server
+    - Create reactive and blocking endpoints (a bff) that makes calls to the log server that sends a response with a delay
+    - Create a client that will send many (1000) simultaneous request to reactive and blocking endpoints
+
+
+curl -X GET --header 'Accept: application/json' "http://localhost:8080/logs"
+curl -X GET --header 'Accept: application/stream+json' "http://localhost:8080/logs"
